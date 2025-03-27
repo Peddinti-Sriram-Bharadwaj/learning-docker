@@ -1,0 +1,72 @@
+************************************************************************
+*** This document contains the URLs and commands used in this course ***
+************************************************************************
+
+*** 01_02 ***
+https://www.docker.com/products/docker-desktop/
+
+https://code.visualstudio.com/download
+
+*** 01_03 ***
+https://github.com/LinkedInLearning/docker-your-first-project-4485003
+
+https://git-scm.com/downloads
+
+cd c:\projects\docker-your-first-project-4485003
+
+git clone https://github.com/LinkedInLearning/docker-your-first-project-4485003.git
+
+git checkout CHAPTER#_MOVIE#
+
+git branch
+
+*** 02_01 ***
+Code for this video is in the dockerfile
+
+*** 02_02 ***
+docker build [OPTIONS] PATH | URL | -
+
+https://docs.docker.com/engine/reference/commandline/build/
+
+docker build .
+
+docker build -f [dockerfile] .
+
+docker build --force-rm=true .
+
+docker build --rm=true .
+
+docker build --no-cache .
+
+docker build --help
+
+*** 03_01 ***
+docker search python
+
+docker search --filter is-official=true python
+
+docker search --filter stars=100 python
+
+docker search --filter is-automated=true python
+
+docker search --filter is-official=true --filter stars=10 --filter is-automated=false python
+
+docker search --limit 4 python
+
+docker search --no-trunc python
+
+docker search --format "{{.Name}}: {{.Description}}" --no-trunc python
+
+docker search --format "table {{.Name}}\t{{.IsAutomated}}\t{{.IsOfficial}}\t{{.Description}}\t{{.StarCount}}" python
+
+docker search --format "table {{.Name}}\t{{.IsOfficial}}\t{{.Description}}\t{{.StarCount}}" --filter is-official=true --filter stars=10 --no-trunc python
+
+docker search --help
+
+docker image pull python
+
+https://hub.docker.com/_/python
+
+docker image pull python:3.12-rc-bookworm
+
+docker image pull --help
